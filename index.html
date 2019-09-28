@@ -194,7 +194,7 @@
         </div>
         <div>
             <p>Выберите страну Покупателя</p>
-            <select id="country2Calc">
+            <select id="country3Calc">
                 <option value="Азербайджан">Азербайджан</option>
                 <option value="Армения">Армения</option>
                 <option value="Белоруссия">Белоруссия</option>
@@ -246,17 +246,9 @@
         </div>
         <div>
             <p>Выберете срок</p>
-            <select name="period" id="period">
-                <option value="38">до 6 месяцев</option>
-                <option value="40">от 6 до 24 месяцев и более</option>
-                <option value="2">до 3 лет</option>
-                <option value="4">до 4 лет</option>
-                <option value="6">до 5 лет</option>
-                <option value="8">до 6 лет</option>
-                <option value="10">до 7 лет</option>
-                <option value="12">до 8 лет</option>
-                <option value="14">до 9 лет</option>
-                <option value="16">до 10 лет</option>
+            <select name="period" id="period3Calc">
+                <option value="1">до 6 месяцев</option>
+                <option value="3">от 6 до 24 месяцев и более</option>
             </select>
         </div>
         <div>
@@ -266,13 +258,196 @@
         <p>В качестве коэффициента дифференциации используются финансовое состояние, платежеспособность проекта, финансовый риск проекта</p>
         <div>
             <p>Ведите страховую сумму</p>
-            <input type="number" id="summ_of_inshurance_2_Calc">
+            <input type="number" id="summ_of_inshurance_3_Calc">
         </div>
         <div>
             <p>Индикативная строимость страхования</p>
-            <p id="itog_2_calc"></p>
+            <p id="itog_3_calc"></p>
         </div>
-        <input type="submit" value="Отправить" onclick="getItog2Calc()">
+        <input type="submit" value="Отправить" onclick="getItog3Calc()">
+    </form>
+    <br><br>
+    <hr>
+
+    <form onsubmit="return false">
+        <h2>Тарифные ставки по страхованию займов</h2>
+        <div>
+            <p>Базовый тариф</p>
+            <p>1,17%-2,04%</p>
+        </div>
+        <!-- <div>
+            <p>Выберите страну Покупателя</p>
+            <select id="country4Calc">
+                <option value="Азербайджан">Азербайджан</option>
+                <option value="Армения">Армения</option>
+                <option value="Белоруссия">Белоруссия</option>
+                <option value="Грузия">Грузия</option>
+                <option value="Кыргызстан">Кыргызстан</option>
+                <option value="Россия">Россия</option>
+                <option value="Таджикистан">Таджикистан</option>
+                <option value="Туркменистан">Туркменистан</option>
+                <option value="Украина">Украина</option>
+                <option value="Узбекистан">Узбекистан</option>
+                <option value="Молдова">Молдова</option>
+                <option value="Казахстан">Казахстан</option>
+                <option value="Китай">Китай</option>
+                <option value="Турция">Турция</option>
+                <option value="Иран">Иран</option>
+                <option value="Монголия">Монголия</option>
+                <option value="Индия">Индия</option>
+                <option value="Афганистан">Афганистан</option>
+                <option value="Пакистан">Пакистан</option>
+                <option value="Вьетнам">Вьетнам</option>
+                <option value="Япония">Япония</option>
+                <option value="ОАЭ">ОАЭ</option>
+                <option value="Саудовская Аравия">Саудовская Аравия</option>
+                <option value="Израиль">Израиль</option>
+                <option value="Сирия">Сирия</option>
+                <option value="Тайланд">Тайланд</option>
+                <option value="Южная Корея">Южная Корея</option>
+                <option value="Египет">Египет</option>
+                <option value="США">США</option>
+                <option value="Италия">Италия</option>
+                <option value="Германия">Германия</option>
+                <option value="Нидерланды">Нидерланды</option>
+                <option value="Великобритания">Великобритания</option>
+                <option value="Франция">Франция</option>
+                <option value="Испания">Испания</option>
+                <option value="Латвия">Латвия</option>
+                <option value="Литва">Литва</option>
+                <option value="Эстония">Эстония</option>
+                <option value="Греция">Греция</option>
+                <option value="Польша">Польша</option>
+                <option value="Чехия">Чехия</option>
+                <option value="Словакия">Словакия</option>
+                <option value="Швейцария">Швейцария</option>
+                <option value="Сербия">Сербия</option>
+                <option value="Румыния">Румыния</option>
+                <option value="Болгария">Болгария</option>
+                <option value="Венгрия">Венгрия</option>
+            </select>
+        </div> -->
+        <div>
+            <p>Выберете срок</p>
+            <select name="period" id="period4Calc">
+                <option value="0">1 год</option>
+                <option value="1">2 года</option>
+                <option value="2">3 года</option>
+                <option value="3">4 года</option>
+                <option value="4">5 лет</option>
+                <option value="5">6 лет</option>
+                <option value="6">7 лет</option>
+                <option value="7">8 лет</option>
+                <option value="8">9 лет</option>
+                <option value="9">10 лет</option>
+            </select>
+        </div>
+        <div>
+            <p>Диапазон тарифов в процентах</p>
+            <p></p>
+        </div>
+        <p>В качестве коэффициента дифференциации используются несвоевременное исполнение обязательств, структура финансирования, риск неплатежей</p>
+        <div>
+            <p>Ведите страховую сумму</p>
+            <input type="number" id="summ_of_inshurance_4_Calc">
+        </div>
+        <div>
+            <p>Индикативная строимость страхования</p>
+            <p id="itog_4_calc"></p>
+        </div>
+        <input type="submit" value="Отправить" onclick="getItog4Calc()">
+    </form>
+    <br><br>
+    <hr>
+
+    <form onsubmit="return false">
+        <h2>Тарифные ставки по страхованию авансов, гарантий и гражданско-правовой ответственности, 
+            в том числе ГПО Экспортера по облигациям и ГПО экспортера по срочным валютным сделкам</h2>
+        <div>
+            <p>Базовый тариф</p>
+            <p>0,124%</p>
+        </div>
+        <!-- <div>
+            <p>Выберите страну Покупателя</p>
+            <select id="country4Calc">
+                <option value="Азербайджан">Азербайджан</option>
+                <option value="Армения">Армения</option>
+                <option value="Белоруссия">Белоруссия</option>
+                <option value="Грузия">Грузия</option>
+                <option value="Кыргызстан">Кыргызстан</option>
+                <option value="Россия">Россия</option>
+                <option value="Таджикистан">Таджикистан</option>
+                <option value="Туркменистан">Туркменистан</option>
+                <option value="Украина">Украина</option>
+                <option value="Узбекистан">Узбекистан</option>
+                <option value="Молдова">Молдова</option>
+                <option value="Казахстан">Казахстан</option>
+                <option value="Китай">Китай</option>
+                <option value="Турция">Турция</option>
+                <option value="Иран">Иран</option>
+                <option value="Монголия">Монголия</option>
+                <option value="Индия">Индия</option>
+                <option value="Афганистан">Афганистан</option>
+                <option value="Пакистан">Пакистан</option>
+                <option value="Вьетнам">Вьетнам</option>
+                <option value="Япония">Япония</option>
+                <option value="ОАЭ">ОАЭ</option>
+                <option value="Саудовская Аравия">Саудовская Аравия</option>
+                <option value="Израиль">Израиль</option>
+                <option value="Сирия">Сирия</option>
+                <option value="Тайланд">Тайланд</option>
+                <option value="Южная Корея">Южная Корея</option>
+                <option value="Египет">Египет</option>
+                <option value="США">США</option>
+                <option value="Италия">Италия</option>
+                <option value="Германия">Германия</option>
+                <option value="Нидерланды">Нидерланды</option>
+                <option value="Великобритания">Великобритания</option>
+                <option value="Франция">Франция</option>
+                <option value="Испания">Испания</option>
+                <option value="Латвия">Латвия</option>
+                <option value="Литва">Литва</option>
+                <option value="Эстония">Эстония</option>
+                <option value="Греция">Греция</option>
+                <option value="Польша">Польша</option>
+                <option value="Чехия">Чехия</option>
+                <option value="Словакия">Словакия</option>
+                <option value="Швейцария">Швейцария</option>
+                <option value="Сербия">Сербия</option>
+                <option value="Румыния">Румыния</option>
+                <option value="Болгария">Болгария</option>
+                <option value="Венгрия">Венгрия</option>
+            </select>
+        </div> -->
+        <div>
+            <p>Выберете срок</p>
+            <select name="period" id="period5Calc">
+                <option value="0">1 год</option>
+                <option value="1">2 года</option>
+                <option value="2">3 года</option>
+                <option value="3">4 года</option>
+                <option value="4">5 лет</option>
+                <option value="5">6 лет</option>
+                <option value="6">7 лет</option>
+                <option value="7">8 лет</option>
+                <option value="8">9 лет</option>
+            </select>
+        </div>
+        <div>
+            <p>Диапазон тарифов в процентах</p>
+            <p></p>
+        </div>
+        <p>В качестве коэффициента дифференциации используются валютные колебания, коммерческие риски, несвоевременное исполнение обязательств, 
+            изменение законодательной базы, страновые риски, годовой оборот компании, Франшиза</p>
+        <div>
+            <p>Ведите страховую сумму</p>
+            <input type="number" id="summ_of_inshurance_5_Calc">
+        </div>
+        <div>
+            <p>Индикативная строимость страхования</p>
+            <p id="itog_5_calc"></p>
+        </div>
+        <input type="submit" value="Отправить" onclick="getItog5Calc()">
     </form>
     <script src="script.js"></script>
 </body>

@@ -25,8 +25,7 @@ var tariffCreditAndGarantees = [
     [0.9, 1.51, 1.36, 2.5],
     [1.49, 2.11, 2.11, 3],
     [2.1, 2.58, 2.58, 3.5],
-    [2.9, 3.17, 3.17, 4],
-
+    [2.9, 3.17, 3.17, 4]
 ];
 
 var loanInsuranceTariffRates = [
@@ -233,4 +232,95 @@ function getCountryCoefficient2Calc() {
 
 function getItog2Calc() {
     return document.getElementById('itog_2_calc').innerHTML = Math.round(getSummOfInshurance2Calc() * getCountryCoefficient2Calc() / 100);
+}
+
+
+// Тарифные ставки по договорам страхования аккредитивов и гарантий
+
+function getSummOfInshurance3Calc() {
+    let select = document.getElementById('summ_of_inshurance_3_Calc');
+    let value = select.value;
+    return value;
+}
+
+function getCountryValue3Calc() {
+    let select = document.getElementById("country3Calc");
+    let country = select.options[select.selectedIndex].value;
+    return country;
+}
+
+function getTariffCreditAndGaranteesValue() {
+    let select = document.getElementById('period3Calc');
+    let tariffValue = select.options[select.selectedIndex].value;
+    return tariffValue;
+}
+
+function getTariffCreditAndGaranteesCoefficient() {
+    let period3Value = getTariffCreditAndGaranteesValue();
+    let country3Value = getCountryValue3Calc();
+
+    return tariffCreditAndGarantees[country_value_corporate.get(country3Value) < 0 ? 0 : country_value_corporate.get(country3Value) - 1][period3Value];
+}
+
+function getItog3Calc() {
+    return document.getElementById('itog_3_calc').innerHTML = Math.round(getSummOfInshurance3Calc() * getTariffCreditAndGaranteesCoefficient() / 100);
+}
+
+
+// Тарифные ставки по страхованию займов
+
+// function getCountryValue4Calc() {
+//     let select = document.getElementById("country4Calc");
+//     let country = select.options[select.selectedIndex].value;
+//     return country;
+// }
+
+function getSummOfInshurance4Calc() {
+    let select = document.getElementById('summ_of_inshurance_4_Calc');
+    let value = select.value;
+    return value;
+}
+
+function getLoanInsuranceTariffRatesValue() {
+    let select = document.getElementById('period4Calc');
+    let tariffValue = select.options[select.selectedIndex].value;
+    return tariffValue;
+}
+
+function getLoanInsuranceTariffRates() {
+    let period4Value = getLoanInsuranceTariffRatesValue();
+    // let country4Value = getCountryValue4Calc();
+
+    return loanInsuranceTariffRates[6][period4Value];
+}
+
+function getItog4Calc() {
+    return document.getElementById('itog_4_calc').innerHTML = Math.round(getSummOfInshurance4Calc() * getLoanInsuranceTariffRates() / 100);
+}
+
+
+//  Тарифные ставки по страхованию авансов, гарантий и гражданско-правовой ответственности, 
+//  в том числе ГПО Экспортера по облигациям и ГПО экспортера по срочным валютным сделкам
+
+function getSummOfInshurance5Calc() {
+    let select = document.getElementById('summ_of_inshurance_5_Calc');
+    let value = select.value;
+    return value;
+}
+
+function getTariffRatesOnInsuranceOfAdvancesValue() {
+    let select = document.getElementById('period5Calc');
+    let tariffValue = select.options[select.selectedIndex].value;
+    return tariffValue;
+}
+
+function getTariffRatesOnInsuranceOfAdvances() {
+    let period5Value = getTariffRatesOnInsuranceOfAdvancesValue();
+    // let country4Value = getCountryValue4Calc();
+
+    return tariffRatesOnInsuranceOfAdvances[6][period5Value];
+}
+
+function getItog5Calc() {
+    return document.getElementById('itog_5_calc').innerHTML = Math.round(getSummOfInshurance5Calc() * getTariffRatesOnInsuranceOfAdvances() / 100);
 }
