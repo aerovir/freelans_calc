@@ -201,9 +201,9 @@ function getCountryCoefficient1Calc() {
     }
 
     if (parseInt(periodValue) >= 16) {
-        return coefficientExportCredit[country_value_corporate.get(countryValue) < 0 ? 0 : country_value_corporate.get(countryValue) - 1][arrayPeriodValue.get(periodValue)];
+        return document.getElementById('tariff1Calc').innerHTML = coefficientExportCredit[country_value_corporate.get(countryValue) < 0 ? 0 : country_value_corporate.get(countryValue) - 1][arrayPeriodValue.get(periodValue)];
     } else {
-        return coefficientExportCredit[country_value_OECD.get(countryValue) < 0 ? 0 : country_value_OECD.get(countryValue) - 1][arrayPeriodValue.get(periodValue)];
+        return document.getElementById('tariff1Calc').innerHTML = coefficientExportCredit[country_value_OECD.get(countryValue) < 0 ? 0 : country_value_OECD.get(countryValue) - 1][arrayPeriodValue.get(periodValue)];
     }
 }
 
@@ -227,7 +227,7 @@ function getCountryValue2Calc() {
 }
 
 function getCountryCoefficient2Calc() {
-    return coefficientContractInsurance[country_value_corporate.get(getCountryValue2Calc()) < 0 ? 0 : country_value_corporate.get(getCountryValue2Calc()) - 1][2];
+    return document.getElementById('tariff2Calc').innerHTML = coefficientContractInsurance[country_value_corporate.get(getCountryValue2Calc()) < 0 ? 0 : country_value_corporate.get(getCountryValue2Calc()) - 1][2];
 }
 
 function getItog2Calc() {
@@ -259,21 +259,12 @@ function getTariffCreditAndGaranteesCoefficient() {
     let period3Value = getTariffCreditAndGaranteesValue();
     let country3Value = getCountryValue3Calc();
 
-    return tariffCreditAndGarantees[country_value_corporate.get(country3Value) < 0 ? 0 : country_value_corporate.get(country3Value) - 1][period3Value];
+    return document.getElementById('tariff3Calc').innerHTML = tariffCreditAndGarantees[country_value_corporate.get(country3Value) < 0 ? 0 : country_value_corporate.get(country3Value) - 1][period3Value];
 }
 
 function getItog3Calc() {
     return document.getElementById('itog_3_calc').innerHTML = Math.round(getSummOfInshurance3Calc() * getTariffCreditAndGaranteesCoefficient() / 100);
 }
-
-
-// Тарифные ставки по страхованию займов
-
-// function getCountryValue4Calc() {
-//     let select = document.getElementById("country4Calc");
-//     let country = select.options[select.selectedIndex].value;
-//     return country;
-// }
 
 function getSummOfInshurance4Calc() {
     let select = document.getElementById('summ_of_inshurance_4_Calc');
@@ -284,13 +275,11 @@ function getSummOfInshurance4Calc() {
 function getLoanInsuranceTariffRatesValue() {
     let select = document.getElementById('period4Calc');
     let tariffValue = select.options[select.selectedIndex].value;
-    return tariffValue;
+    return document.getElementById('tariff4Calc').innerHTML = tariffValue;
 }
 
 function getLoanInsuranceTariffRates() {
     let period4Value = getLoanInsuranceTariffRatesValue();
-    // let country4Value = getCountryValue4Calc();
-
     return loanInsuranceTariffRates[6][period4Value];
 }
 
@@ -316,9 +305,7 @@ function getTariffRatesOnInsuranceOfAdvancesValue() {
 
 function getTariffRatesOnInsuranceOfAdvances() {
     let period5Value = getTariffRatesOnInsuranceOfAdvancesValue();
-    // let country4Value = getCountryValue4Calc();
-
-    return tariffRatesOnInsuranceOfAdvances[6][period5Value];
+    return document.getElementById('tariff5Calc').innerHTML = tariffRatesOnInsuranceOfAdvances[6][period5Value];
 }
 
 function getItog5Calc() {
